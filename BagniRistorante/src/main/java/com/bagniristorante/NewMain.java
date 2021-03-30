@@ -10,14 +10,14 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        BagnoUomo bagnoUomo = new BagnoUomo();
-        BagnoDonna bagnoDonna = new BagnoDonna();
+        Bagno bagnoUomo = new Bagno();
+        Bagno bagnoDonna = new Bagno();
 
-        Persona p1 = new Persona("p1", true, bagnoUomo);
-        Persona p2 = new Persona("p2", false, bagnoDonna);
-        Persona p3 = new Persona("p3", true, bagnoUomo);
-        Persona p4 = new Persona("p4", false, bagnoDonna);
-        Persona p5 = new Persona("p5", true, bagnoUomo);
+        Runnable p1 = new Persona("uomo1", true, bagnoUomo);
+        Runnable p2 = new Persona("donna1", false, bagnoDonna);
+        Runnable p3 = new Persona("uomo2", true, bagnoUomo);
+        Runnable p4 = new Persona("donna2", false, bagnoDonna);
+        Runnable p5 = new Persona("uomo3", true, bagnoUomo);
 
         Thread t1 = new Thread(p1);
         Thread t2 = new Thread(p2);
